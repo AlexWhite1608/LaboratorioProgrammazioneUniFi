@@ -6,12 +6,15 @@
 #define LABORATORIOPROGRAMMAZIONE_LISTMANAGER_H
 
 #include <list>
-#include "list.h"
+#include "List.h"
 
 class ListManager {
-    bool addList();
 
-    bool removeList();
+    void createList(const std::string& listType);
+
+    void removeList(List* list);
+
+    void printList(List* list);
 
 private:
     std::list<List*> lists;

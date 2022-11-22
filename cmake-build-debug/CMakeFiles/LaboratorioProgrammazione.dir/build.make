@@ -128,12 +128,40 @@ CMakeFiles/LaboratorioProgrammazione.dir/ListManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LaboratorioProgrammazione.dir/ListManager.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Dev\C++\LaboratorioProgrammazione\ListManager.cpp -o CMakeFiles\LaboratorioProgrammazione.dir\ListManager.cpp.s
 
+CMakeFiles/LaboratorioProgrammazione.dir/ProductList.cpp.obj: CMakeFiles/LaboratorioProgrammazione.dir/flags.make
+CMakeFiles/LaboratorioProgrammazione.dir/ProductList.cpp.obj: ../ProductList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Dev\C++\LaboratorioProgrammazione\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/LaboratorioProgrammazione.dir/ProductList.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LaboratorioProgrammazione.dir\ProductList.cpp.obj -c C:\Dev\C++\LaboratorioProgrammazione\ProductList.cpp
+
+CMakeFiles/LaboratorioProgrammazione.dir/ProductList.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LaboratorioProgrammazione.dir/ProductList.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Dev\C++\LaboratorioProgrammazione\ProductList.cpp > CMakeFiles\LaboratorioProgrammazione.dir\ProductList.cpp.i
+
+CMakeFiles/LaboratorioProgrammazione.dir/ProductList.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LaboratorioProgrammazione.dir/ProductList.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Dev\C++\LaboratorioProgrammazione\ProductList.cpp -o CMakeFiles\LaboratorioProgrammazione.dir\ProductList.cpp.s
+
+CMakeFiles/LaboratorioProgrammazione.dir/Cart.cpp.obj: CMakeFiles/LaboratorioProgrammazione.dir/flags.make
+CMakeFiles/LaboratorioProgrammazione.dir/Cart.cpp.obj: ../Cart.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Dev\C++\LaboratorioProgrammazione\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/LaboratorioProgrammazione.dir/Cart.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LaboratorioProgrammazione.dir\Cart.cpp.obj -c C:\Dev\C++\LaboratorioProgrammazione\Cart.cpp
+
+CMakeFiles/LaboratorioProgrammazione.dir/Cart.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LaboratorioProgrammazione.dir/Cart.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Dev\C++\LaboratorioProgrammazione\Cart.cpp > CMakeFiles\LaboratorioProgrammazione.dir\Cart.cpp.i
+
+CMakeFiles/LaboratorioProgrammazione.dir/Cart.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LaboratorioProgrammazione.dir/Cart.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Dev\C++\LaboratorioProgrammazione\Cart.cpp -o CMakeFiles\LaboratorioProgrammazione.dir\Cart.cpp.s
+
 # Object files for target LaboratorioProgrammazione
 LaboratorioProgrammazione_OBJECTS = \
 "CMakeFiles/LaboratorioProgrammazione.dir/main.cpp.obj" \
 "CMakeFiles/LaboratorioProgrammazione.dir/Product.cpp.obj" \
 "CMakeFiles/LaboratorioProgrammazione.dir/List.cpp.obj" \
-"CMakeFiles/LaboratorioProgrammazione.dir/ListManager.cpp.obj"
+"CMakeFiles/LaboratorioProgrammazione.dir/ListManager.cpp.obj" \
+"CMakeFiles/LaboratorioProgrammazione.dir/ProductList.cpp.obj" \
+"CMakeFiles/LaboratorioProgrammazione.dir/Cart.cpp.obj"
 
 # External object files for target LaboratorioProgrammazione
 LaboratorioProgrammazione_EXTERNAL_OBJECTS =
@@ -142,11 +170,13 @@ LaboratorioProgrammazione.exe: CMakeFiles/LaboratorioProgrammazione.dir/main.cpp
 LaboratorioProgrammazione.exe: CMakeFiles/LaboratorioProgrammazione.dir/Product.cpp.obj
 LaboratorioProgrammazione.exe: CMakeFiles/LaboratorioProgrammazione.dir/List.cpp.obj
 LaboratorioProgrammazione.exe: CMakeFiles/LaboratorioProgrammazione.dir/ListManager.cpp.obj
+LaboratorioProgrammazione.exe: CMakeFiles/LaboratorioProgrammazione.dir/ProductList.cpp.obj
+LaboratorioProgrammazione.exe: CMakeFiles/LaboratorioProgrammazione.dir/Cart.cpp.obj
 LaboratorioProgrammazione.exe: CMakeFiles/LaboratorioProgrammazione.dir/build.make
 LaboratorioProgrammazione.exe: CMakeFiles/LaboratorioProgrammazione.dir/linklibs.rsp
 LaboratorioProgrammazione.exe: CMakeFiles/LaboratorioProgrammazione.dir/objects1.rsp
 LaboratorioProgrammazione.exe: CMakeFiles/LaboratorioProgrammazione.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Dev\C++\LaboratorioProgrammazione\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable LaboratorioProgrammazione.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Dev\C++\LaboratorioProgrammazione\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable LaboratorioProgrammazione.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\LaboratorioProgrammazione.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

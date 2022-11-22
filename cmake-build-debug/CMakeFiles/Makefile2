@@ -93,12 +93,12 @@ clean: CMakeFiles/LaboratorioProgrammazione.dir/clean
 CMakeFiles/LaboratorioProgrammazione.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LaboratorioProgrammazione.dir\build.make CMakeFiles/LaboratorioProgrammazione.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LaboratorioProgrammazione.dir\build.make CMakeFiles/LaboratorioProgrammazione.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Dev\C++\LaboratorioProgrammazione\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5 "Built target LaboratorioProgrammazione"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Dev\C++\LaboratorioProgrammazione\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target LaboratorioProgrammazione"
 .PHONY : CMakeFiles/LaboratorioProgrammazione.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/LaboratorioProgrammazione.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Dev\C++\LaboratorioProgrammazione\cmake-build-debug\CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Dev\C++\LaboratorioProgrammazione\cmake-build-debug\CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/LaboratorioProgrammazione.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Dev\C++\LaboratorioProgrammazione\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/LaboratorioProgrammazione.dir/rule

@@ -19,6 +19,10 @@ public:
 
     unsigned int getQuantity() const;
 
+    void editName(const std::string& newName);
+
+    void editQuantity(const unsigned int newQuantity);
+
 private:
     std::string name;
     std::string category;

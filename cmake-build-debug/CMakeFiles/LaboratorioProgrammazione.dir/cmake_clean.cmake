@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/LaboratorioProgrammazione.dir/Cart.cpp.obj"
   "CMakeFiles/LaboratorioProgrammazione.dir/List.cpp.obj"
   "CMakeFiles/LaboratorioProgrammazione.dir/ListManager.cpp.obj"
   "CMakeFiles/LaboratorioProgrammazione.dir/Product.cpp.obj"
+  "CMakeFiles/LaboratorioProgrammazione.dir/ProductList.cpp.obj"
   "CMakeFiles/LaboratorioProgrammazione.dir/main.cpp.obj"
   "LaboratorioProgrammazione.exe"
   "LaboratorioProgrammazione.exe.manifest"

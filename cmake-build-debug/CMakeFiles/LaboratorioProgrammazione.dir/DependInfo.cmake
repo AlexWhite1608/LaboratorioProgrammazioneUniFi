@@ -4,9 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Dev/C++/LaboratorioProgrammazione/Cart.cpp" "C:/Dev/C++/LaboratorioProgrammazione/cmake-build-debug/CMakeFiles/LaboratorioProgrammazione.dir/Cart.cpp.obj"
   "C:/Dev/C++/LaboratorioProgrammazione/List.cpp" "C:/Dev/C++/LaboratorioProgrammazione/cmake-build-debug/CMakeFiles/LaboratorioProgrammazione.dir/List.cpp.obj"
   "C:/Dev/C++/LaboratorioProgrammazione/ListManager.cpp" "C:/Dev/C++/LaboratorioProgrammazione/cmake-build-debug/CMakeFiles/LaboratorioProgrammazione.dir/ListManager.cpp.obj"
   "C:/Dev/C++/LaboratorioProgrammazione/Product.cpp" "C:/Dev/C++/LaboratorioProgrammazione/cmake-build-debug/CMakeFiles/LaboratorioProgrammazione.dir/Product.cpp.obj"
+  "C:/Dev/C++/LaboratorioProgrammazione/ProductList.cpp" "C:/Dev/C++/LaboratorioProgrammazione/cmake-build-debug/CMakeFiles/LaboratorioProgrammazione.dir/ProductList.cpp.obj"
   "C:/Dev/C++/LaboratorioProgrammazione/main.cpp" "C:/Dev/C++/LaboratorioProgrammazione/cmake-build-debug/CMakeFiles/LaboratorioProgrammazione.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

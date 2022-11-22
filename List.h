@@ -12,8 +12,16 @@
 
 class List {
 
+public:
+    explicit List(const std::string &name);
 
-private:
+    virtual void addProduct(Product* product) = 0;
+
+    virtual void removeProduct(Product* product) = 0;
+
+    virtual bool search(Product*) = 0;
+
+protected:
     std::string name;
     unsigned int numberOfElements = 0;
     std::list<Product*> products;

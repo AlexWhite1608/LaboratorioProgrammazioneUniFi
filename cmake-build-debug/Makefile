@@ -142,6 +142,33 @@ LaboratorioProgrammazione/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LaboratorioProgrammazione.dir\build.make CMakeFiles/LaboratorioProgrammazione.dir/build
 .PHONY : LaboratorioProgrammazione/fast
 
+Cart.obj: Cart.cpp.obj
+
+.PHONY : Cart.obj
+
+# target to build an object file
+Cart.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LaboratorioProgrammazione.dir\build.make CMakeFiles/LaboratorioProgrammazione.dir/Cart.cpp.obj
+.PHONY : Cart.cpp.obj
+
+Cart.i: Cart.cpp.i
+
+.PHONY : Cart.i
+
+# target to preprocess a source file
+Cart.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LaboratorioProgrammazione.dir\build.make CMakeFiles/LaboratorioProgrammazione.dir/Cart.cpp.i
+.PHONY : Cart.cpp.i
+
+Cart.s: Cart.cpp.s
+
+.PHONY : Cart.s
+
+# target to generate assembly for a file
+Cart.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LaboratorioProgrammazione.dir\build.make CMakeFiles/LaboratorioProgrammazione.dir/Cart.cpp.s
+.PHONY : Cart.cpp.s
+
 List.obj: List.cpp.obj
 
 .PHONY : List.obj
@@ -223,6 +250,33 @@ Product.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LaboratorioProgrammazione.dir\build.make CMakeFiles/LaboratorioProgrammazione.dir/Product.cpp.s
 .PHONY : Product.cpp.s
 
+ProductList.obj: ProductList.cpp.obj
+
+.PHONY : ProductList.obj
+
+# target to build an object file
+ProductList.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LaboratorioProgrammazione.dir\build.make CMakeFiles/LaboratorioProgrammazione.dir/ProductList.cpp.obj
+.PHONY : ProductList.cpp.obj
+
+ProductList.i: ProductList.cpp.i
+
+.PHONY : ProductList.i
+
+# target to preprocess a source file
+ProductList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LaboratorioProgrammazione.dir\build.make CMakeFiles/LaboratorioProgrammazione.dir/ProductList.cpp.i
+.PHONY : ProductList.cpp.i
+
+ProductList.s: ProductList.cpp.s
+
+.PHONY : ProductList.s
+
+# target to generate assembly for a file
+ProductList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LaboratorioProgrammazione.dir\build.make CMakeFiles/LaboratorioProgrammazione.dir/ProductList.cpp.s
+.PHONY : ProductList.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -259,6 +313,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... LaboratorioProgrammazione
+	@echo ... Cart.obj
+	@echo ... Cart.i
+	@echo ... Cart.s
 	@echo ... List.obj
 	@echo ... List.i
 	@echo ... List.s
@@ -268,6 +325,9 @@ help:
 	@echo ... Product.obj
 	@echo ... Product.i
 	@echo ... Product.s
+	@echo ... ProductList.obj
+	@echo ... ProductList.i
+	@echo ... ProductList.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

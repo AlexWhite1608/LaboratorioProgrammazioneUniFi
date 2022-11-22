@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Dev/C++/LaboratorioProgrammazione/Cart.cpp">
+			<Option target="LaboratorioProgrammazione"/>
+		</Unit>
+		<Unit filename="C:/Dev/C++/LaboratorioProgrammazione/Cart.h">
+			<Option target="LaboratorioProgrammazione"/>
+		</Unit>
 		<Unit filename="C:/Dev/C++/LaboratorioProgrammazione/List.cpp">
 			<Option target="LaboratorioProgrammazione"/>
 		</Unit>
@@ -96,6 +102,12 @@
 			<Option target="LaboratorioProgrammazione"/>
 		</Unit>
 		<Unit filename="C:/Dev/C++/LaboratorioProgrammazione/Product.h">
+			<Option target="LaboratorioProgrammazione"/>
+		</Unit>
+		<Unit filename="C:/Dev/C++/LaboratorioProgrammazione/ProductList.cpp">
+			<Option target="LaboratorioProgrammazione"/>
+		</Unit>
+		<Unit filename="C:/Dev/C++/LaboratorioProgrammazione/ProductList.h">
 			<Option target="LaboratorioProgrammazione"/>
 		</Unit>
 		<Unit filename="C:/Dev/C++/LaboratorioProgrammazione/main.cpp">

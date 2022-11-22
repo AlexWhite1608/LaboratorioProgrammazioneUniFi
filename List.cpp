@@ -3,3 +3,5 @@
 //
 
 #include "List.h"
+
+List::List(const std::string &name) : name(name) {}
