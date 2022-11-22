@@ -1,0 +1,3 @@
+C:/Dev/C++/LaboratorioProgrammazione/cmake-build-debug/CMakeFiles/LaboratorioProgrammazione.dir
+C:/Dev/C++/LaboratorioProgrammazione/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Dev/C++/LaboratorioProgrammazione/cmake-build-debug/CMakeFiles/rebuild_cache.dir
