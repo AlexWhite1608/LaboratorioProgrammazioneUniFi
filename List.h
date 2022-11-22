@@ -19,11 +19,12 @@ public:
 
     virtual void removeProduct(Product* product) = 0;
 
-    virtual bool search(Product*) = 0;
+    const std::string &getName() const;
+
+    virtual Product* search(Product*) = 0;
 
 protected:
     std::string name;
-    unsigned int numberOfElements = 0;
     std::list<Product*> products;
 };
 

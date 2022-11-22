@@ -2,6 +2,7 @@
 // Created by aless on 22/11/2022.
 //
 
+#include <iostream>
 #include "Product.h"
 
 Product::Product(const std::string &name, const std::string &category, unsigned int quantity) : name(name),
@@ -22,4 +23,16 @@ unsigned int Product::getQuantity() const {
 
 Product::~Product() {
 
+}
+
+void Product::editName(const std::string &newName) {
+    this->name = newName;
+
+    std::cout << "Il nuovo nome del prodotto è " << this->getName();
+}
+
+void Product::editQuantity(const unsigned int newQuantity) {
+    this->quantity = newQuantity;
+
+    std::cout << "Il nuova quantità del prodotto è " << this->getQuantity();
 }

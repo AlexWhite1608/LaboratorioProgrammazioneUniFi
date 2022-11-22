@@ -3,4 +3,4 @@ project(LaboratorioProgrammazione)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(LaboratorioProgrammazione main.cpp Product.cpp Product.h List.cpp List.h ListManager.cpp ListManager.h ProductList.cpp ProductList.h Cart.cpp Cart.h)
+add_executable(LaboratorioProgrammazione main.cpp Product.cpp Product.h List.cpp List.h ListManager.cpp ListManager.h ProductList.cpp ProductList.h Cart.cpp Cart.h ActionManager.h)

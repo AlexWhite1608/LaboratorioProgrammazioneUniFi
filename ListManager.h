@@ -10,13 +10,15 @@
 
 class ListManager {
 
-    void createList(const std::string& listType);
+    void createList(const std::string& listType, const std::string& listName);
 
     void removeList(List* list);
 
     void printList(List* list);
 
 private:
+    const List* searchList(List* list);
+
     std::list<List*> lists;
 };
 

@@ -15,7 +15,7 @@ public:
 
     void removeProduct(Product *product) override;
 
-    bool search(Product *product) override;
+    Product* search(Product *product) override;
 };
 
 

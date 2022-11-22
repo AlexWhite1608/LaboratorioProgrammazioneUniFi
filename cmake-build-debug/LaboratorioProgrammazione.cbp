@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Dev/C++/LaboratorioProgrammazione/ActionManager.h">
+			<Option target="LaboratorioProgrammazione"/>
+		</Unit>
 		<Unit filename="C:/Dev/C++/LaboratorioProgrammazione/Cart.cpp">
 			<Option target="LaboratorioProgrammazione"/>
 		</Unit>

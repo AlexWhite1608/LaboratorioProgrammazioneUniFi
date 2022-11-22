@@ -14,6 +14,6 @@ void Cart::removeProduct(Product *product) {
 
 }
 
-bool Cart::search(Product *product) {
-    return false;
+Product * Cart::search(Product *product) {
+    return nullptr;
 }
