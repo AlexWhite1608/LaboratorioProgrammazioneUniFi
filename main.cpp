@@ -39,7 +39,32 @@ int main() {
             std::cout << "E' stata creata la lista " << listManager->searchList(newList)->getName() << "!\n";
 
         } else if (selectedAction == 2) {               // Inserire un nuovo prodotto nella lista
-            //TODO: quando si inserisce un prodotto si deve scegliere in quale lista metterlo!
+            listManager->printLists();
+            std::cout << "Selezionare la lista dove inserire il prodotto:" << std::endl;
+
+            std::string selectedList;
+            std::cin >> selectedList;
+
+            List* list = listManager->searchList(selectedList);
+
+            std::cout << "Hai scelto la lista " << selectedList << std::endl;
+
+            std::cout << "Inserire il nome del prodotto:" << std::endl;
+            std::string name;
+            std::cin >> name;
+
+            std::cout << "Inserire la categoria del prodotto:" << std::endl;
+            std::string category;
+            std::cin >> category;
+
+            std::cout << "Inserire la quantità del prodotto:" << std::endl;
+            unsigned int quantity;
+            std::cin >> quantity;
+
+            Product* product = new Product(name, category, quantity);
+            list->addProduct(product);
+
+            std::cout << name << " e' stato inserito nella lista " << selectedList << std::endl;
 
         } else if (selectedAction == 3) {               // Rimuovere un prodotto dalla lista
 
@@ -48,8 +73,6 @@ int main() {
         } else if (selectedAction == 5) {               // Inserire un prodotto nel carrello
 
         } else if (selectedAction == 6) {               // Visualizzare una lista
-
-            std::cout << "Elenco delle liste disponibili:" << std::endl;
             listManager->printLists();
 
             std::cout << "Selezionare la lista da visualizzare:" << std::endl;
@@ -62,6 +85,15 @@ int main() {
                 list->printList();
 
         } else if (selectedAction == 7) {               // Eliminare una lista
+            listManager->printLists();
+
+            std::cout << "Selezionare la lista da eliminare:" << std::endl;
+            std::string selectedList;
+            std::cin >> selectedList;
+
+            listManager->removeList(selectedList);
+
+            std::cout << selectedList << " e' stata rimossa!" << std::endl;
 
         } else if (selectedAction == 8) {               // Uscire
             exit(0);

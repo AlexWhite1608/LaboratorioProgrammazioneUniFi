@@ -57,3 +57,14 @@ List *ListManager::searchList(const std::string &name) {
 
     return nullptr;
 }
+
+void ListManager::removeList(const std::string &name) {
+    for(auto i : lists){
+        if(i->getName() == name){
+            lists.remove(i);
+            return;
+        }
+    }
+
+    std::cout << "Impossibile rimuovere la lista selezionata!";
+}

@@ -15,6 +15,8 @@ public:
 
     void removeList(List* list);
 
+    void removeList(const std::string& name);
+
     void printLists();
 
     List* searchList(List* list);
