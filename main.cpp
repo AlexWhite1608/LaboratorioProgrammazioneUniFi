@@ -26,34 +26,43 @@ int main() {
         selectedAction = actionList();
 
         switch (selectedAction) {
+
+            // Creare una nuova lista
             case 1:
                 std::cout << "1";
                 break;
 
+            // Inserire un nuovo prodotto nella lista
             case 2:
                 std::cout << "2";
                 break;
 
+            // Rimuovere un prodotto dalla lista
             case 3:
                 std::cout << "3";
                 break;
 
+            // Aggiornare un prodotto della lista
             case 4:
                 std::cout << "4";
                 break;
 
+            // Inserire un prodotto nel carrello
             case 5:
                 std::cout << "5";
                 break;
 
+            // Visualizzare una lista
             case 6:
                 std::cout << "6";
                 break;
 
+            // Eliminare una lista
             case 7:
                 std::cout << "7";
                 break;
 
+            // Uscire
             case 8:
                 exit(0);
 
