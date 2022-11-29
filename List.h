@@ -5,7 +5,6 @@
 #ifndef LABORATORIOPROGRAMMAZIONE_LIST_H
 #define LABORATORIOPROGRAMMAZIONE_LIST_H
 
-
 #include <string>
 #include <list>
 #include "Product.h"

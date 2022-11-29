@@ -8,15 +8,21 @@
 #include "ProductList.h"
 #include "Cart.h"
 
-void ListManager::createList(const std::string &listType, const std::string& listName) {
+List* ListManager::createList(const std::string &listType, const std::string& listName) {
+    List* newList;
     if (listType == "ProductList"){
-        List* newList = new ProductList(listName);
+        newList = new ProductList(listName);
         lists.push_back(newList);
 
     } else if (listType == "Cart"){
-        List* newList = new Cart(listName);
+        newList = new Cart(listName);
         lists.push_back(newList);
     }
+
+    else
+        newList = nullptr;
+
+    return newList;
 }
 
 const List *ListManager::searchList(List *list) {
@@ -35,10 +41,10 @@ void ListManager::removeList(List *list) {
         std::cout << list->getName() << " non esiste!" << std::endl;
 }
 
-void ListManager::printList(List *list) {
+void ListManager::printLists() {
     std::cout << "Le liste create dall'utente sono:" << std::endl;
 
     for(auto element : lists){
-        std::cout << element->getName();
+        std::cout << element->getName() << std::endl;
     }
 }

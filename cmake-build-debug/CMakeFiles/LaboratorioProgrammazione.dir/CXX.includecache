@@ -6,7 +6,27 @@
 
 #IncludeRegexTransform: 
 
+C:/Dev/C++/LaboratorioProgrammazione/List.h
+string
+-
+list
+-
+Product.h
+C:/Dev/C++/LaboratorioProgrammazione/Product.h
+
+C:/Dev/C++/LaboratorioProgrammazione/ListManager.h
+list
+-
+List.h
+C:/Dev/C++/LaboratorioProgrammazione/List.h
+
+C:/Dev/C++/LaboratorioProgrammazione/Product.h
+string
+-
+
 C:/Dev/C++/LaboratorioProgrammazione/main.cpp
 iostream
 -
+ListManager.h
+C:/Dev/C++/LaboratorioProgrammazione/ListManager.h
 

@@ -25,5 +25,8 @@ CMakeFiles/LaboratorioProgrammazione.dir/ProductList.cpp.obj: ../Product.h
 CMakeFiles/LaboratorioProgrammazione.dir/ProductList.cpp.obj: ../ProductList.cpp
 CMakeFiles/LaboratorioProgrammazione.dir/ProductList.cpp.obj: ../ProductList.h
 
+CMakeFiles/LaboratorioProgrammazione.dir/main.cpp.obj: ../List.h
+CMakeFiles/LaboratorioProgrammazione.dir/main.cpp.obj: ../ListManager.h
+CMakeFiles/LaboratorioProgrammazione.dir/main.cpp.obj: ../Product.h
 CMakeFiles/LaboratorioProgrammazione.dir/main.cpp.obj: ../main.cpp
 

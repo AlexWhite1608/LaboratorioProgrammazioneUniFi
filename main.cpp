@@ -1,4 +1,5 @@
 #include <iostream>
+#include "ListManager.h"
 
 unsigned int actionList();
 unsigned int actionList() {
@@ -21,54 +22,41 @@ unsigned int actionList() {
 
 int main() {
     unsigned int selectedAction = 1;
+    ListManager* listManager = new ListManager();
+
 
     while (selectedAction > 0) {
         selectedAction = actionList();
 
-        switch (selectedAction) {
+        if (selectedAction == 1) {          // Creare una nuova lista
+            List* newList;
+            std::string listName;
 
-            // Creare una nuova lista
-            case 1:
-                std::cout << "1";
-                break;
+            std::cout << "Inserire il nome della lista da creare:" << std::endl;
 
-            // Inserire un nuovo prodotto nella lista
-            case 2:
-                std::cout << "2";
-                break;
+            std::cin >> listName;
 
-            // Rimuovere un prodotto dalla lista
-            case 3:
-                std::cout << "3";
-                break;
+            newList = listManager->createList("ProductList", listName);
 
-            // Aggiornare un prodotto della lista
-            case 4:
-                std::cout << "4";
-                break;
+            std::cout << "E' stata creata la lista " << listManager->searchList(newList)->getName() << "!\n";
 
-            // Inserire un prodotto nel carrello
-            case 5:
-                std::cout << "5";
-                break;
+        } else if (selectedAction == 2) {               // Inserire un nuovo prodotto nella lista
 
-            // Visualizzare una lista
-            case 6:
-                std::cout << "6";
-                break;
+        } else if (selectedAction == 3) {               // Rimuovere un prodotto dalla lista
 
-            // Eliminare una lista
-            case 7:
-                std::cout << "7";
-                break;
+        } else if (selectedAction == 4) {               // Aggiornare un prodotto della lista
 
-            // Uscire
-            case 8:
-                exit(0);
+        } else if (selectedAction == 5) {               // Inserire un prodotto nel carrello
 
-            default:
-                std::cout << "ERRORE!" << std::endl;
-        }
+        } else if (selectedAction == 6) {               // Visualizzare una lista
+
+        } else if (selectedAction == 7) {               // Eliminare una lista
+
+        } else if (selectedAction == 8) {               // Uscire
+            exit(0);
+        } else
+            std::cout << "Errore";
+
     }
 
 
