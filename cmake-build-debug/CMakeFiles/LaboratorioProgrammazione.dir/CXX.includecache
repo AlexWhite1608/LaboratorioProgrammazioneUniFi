@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+C:/Dev/C++/LaboratorioProgrammazione/Cart.cpp
+Cart.h
+C:/Dev/C++/LaboratorioProgrammazione/Cart.h
+
+C:/Dev/C++/LaboratorioProgrammazione/Cart.h
+List.h
+C:/Dev/C++/LaboratorioProgrammazione/List.h
+
 C:/Dev/C++/LaboratorioProgrammazione/List.h
 string
 -
@@ -13,6 +21,18 @@ list
 -
 Product.h
 C:/Dev/C++/LaboratorioProgrammazione/Product.h
+
+C:/Dev/C++/LaboratorioProgrammazione/ListManager.cpp
+algorithm
+-
+iostream
+-
+ListManager.h
+C:/Dev/C++/LaboratorioProgrammazione/ListManager.h
+ProductList.h
+C:/Dev/C++/LaboratorioProgrammazione/ProductList.h
+Cart.h
+C:/Dev/C++/LaboratorioProgrammazione/Cart.h
 
 C:/Dev/C++/LaboratorioProgrammazione/ListManager.h
 list
@@ -24,9 +44,7 @@ C:/Dev/C++/LaboratorioProgrammazione/Product.h
 string
 -
 
-C:/Dev/C++/LaboratorioProgrammazione/main.cpp
-iostream
--
-ListManager.h
-C:/Dev/C++/LaboratorioProgrammazione/ListManager.h
+C:/Dev/C++/LaboratorioProgrammazione/ProductList.h
+List.h
+C:/Dev/C++/LaboratorioProgrammazione/List.h
 

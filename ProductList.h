@@ -16,6 +16,8 @@ public:
     void removeProduct(Product *product) override;
 
     Product* search(Product *product) override;
+
+    void printList() override;
 };
 
 

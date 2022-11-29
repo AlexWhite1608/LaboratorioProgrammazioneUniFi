@@ -44,3 +44,14 @@ Product* ProductList::search(Product *product) {
 
     return nullptr;
 }
+
+void ProductList::printList() {
+    if(products.empty())
+        std::cout << "Lista vuota!" << std::endl;
+
+    for(auto i : products){
+        std::cout << "Nome prodotto: " << i->getName() << std::endl
+                  << "Categoria: " << i->getCategory() << std::endl
+                  << "Quantità: " << i->getQuantity() << std::endl;
+    }
+}

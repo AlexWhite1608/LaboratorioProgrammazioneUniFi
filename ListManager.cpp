@@ -25,7 +25,7 @@ List* ListManager::createList(const std::string &listType, const std::string& li
     return newList;
 }
 
-const List *ListManager::searchList(List *list) {
+List *ListManager::searchList(List *list) {
     for(auto & i : lists){
         if (i == list)
             return i;
@@ -47,4 +47,13 @@ void ListManager::printLists() {
     for(auto element : lists){
         std::cout << element->getName() << std::endl;
     }
+}
+
+List *ListManager::searchList(const std::string &name) {
+    for(auto i : lists){
+        if (i->getName() == name)
+            return i;
+    }
+
+    return nullptr;
 }

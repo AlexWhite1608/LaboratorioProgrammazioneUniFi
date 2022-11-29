@@ -9,3 +9,6 @@ List::List(const std::string &name) : name(name) {}
 const std::string &List::getName() const {
     return name;
 }
+
+List::~List() {
+}

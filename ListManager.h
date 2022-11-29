@@ -17,8 +17,11 @@ public:
 
     void printLists();
 
-    const List* searchList(List* list);
+    List* searchList(List* list);
 
+    List* searchList(const std::string& name);
+
+private:
     std::list<List*> lists;
 };
 

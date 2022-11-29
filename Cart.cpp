@@ -17,3 +17,7 @@ void Cart::removeProduct(Product *product) {
 Product * Cart::search(Product *product) {
     return nullptr;
 }
+
+void Cart::printList() {
+
+}

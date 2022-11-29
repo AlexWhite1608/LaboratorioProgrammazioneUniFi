@@ -22,6 +22,10 @@ public:
 
     virtual Product* search(Product*) = 0;
 
+    virtual void printList() = 0;
+
+    virtual ~List();
+
 protected:
     std::string name;
     std::list<Product*> products;

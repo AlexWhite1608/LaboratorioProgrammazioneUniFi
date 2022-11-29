@@ -33,14 +33,13 @@ int main() {
             std::string listName;
 
             std::cout << "Inserire il nome della lista da creare:" << std::endl;
-
             std::cin >> listName;
 
             newList = listManager->createList("ProductList", listName);
-
             std::cout << "E' stata creata la lista " << listManager->searchList(newList)->getName() << "!\n";
 
         } else if (selectedAction == 2) {               // Inserire un nuovo prodotto nella lista
+            //TODO: quando si inserisce un prodotto si deve scegliere in quale lista metterlo!
 
         } else if (selectedAction == 3) {               // Rimuovere un prodotto dalla lista
 
@@ -49,6 +48,18 @@ int main() {
         } else if (selectedAction == 5) {               // Inserire un prodotto nel carrello
 
         } else if (selectedAction == 6) {               // Visualizzare una lista
+
+            std::cout << "Elenco delle liste disponibili:" << std::endl;
+            listManager->printLists();
+
+            std::cout << "Selezionare la lista da visualizzare:" << std::endl;
+            std::string selectList;
+            std::cin >> selectList;
+
+            List* list = listManager->searchList(selectList);
+
+            if(list != nullptr)
+                list->printList();
 
         } else if (selectedAction == 7) {               // Eliminare una lista
 
