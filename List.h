@@ -22,6 +22,8 @@ public:
 
     virtual Product* search(Product*) = 0;
 
+    virtual Product* search(const std::string& name) = 0;
+
     virtual void printList() = 0;
 
     virtual ~List();

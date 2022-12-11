@@ -21,3 +21,7 @@ Product * Cart::search(Product *product) {
 void Cart::printList() {
 
 }
+
+Product *Cart::search(const std::string &name) {
+    return nullptr;
+}

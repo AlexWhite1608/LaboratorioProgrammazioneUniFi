@@ -28,11 +28,11 @@ Product::~Product() {
 void Product::editName(const std::string &newName) {
     this->name = newName;
 
-    std::cout << "Il nuovo nome del prodotto è " << this->getName();
+    std::cout << "\nIl nuovo nome del prodotto è " << this->getName();
 }
 
 void Product::editQuantity(const unsigned int newQuantity) {
     this->quantity = newQuantity;
 
-    std::cout << "Il nuova quantità del prodotto è " << this->getQuantity();
+    std::cout << "\nIl nuova quantità del prodotto è " << this->getQuantity();
 }

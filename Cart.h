@@ -18,6 +18,8 @@ public:
 
     Product * search(Product *product) override;
 
+    Product *search(const std::string &name) override;
+
     void printList() override;
 
 };

@@ -36,7 +36,7 @@ int main() {
             std::cin >> listName;
 
             newList = listManager->createList("ProductList", listName);
-            std::cout << "E' stata creata la lista " << listManager->searchList(newList)->getName() << "!\n";
+            std::cout << "E' stata creata la lista " << listManager->searchList(newList)->getName() << "!\n\n";
 
         } else if (selectedAction == 2) {               // Inserire un nuovo prodotto nella lista
             listManager->printLists();
@@ -67,6 +67,27 @@ int main() {
             std::cout << name << " e' stato inserito nella lista " << selectedList << std::endl;
 
         } else if (selectedAction == 3) {               // Rimuovere un prodotto dalla lista
+            listManager->printLists();
+            std::cout << "Selezionare la lista dalla quale rimuovere il prodotto:" << std::endl;
+
+            std::string selectedList;
+            std::cin >> selectedList;
+
+            List* list = listManager->searchList(selectedList);
+
+            std::cout << "Hai scelto la lista " << selectedList << std::endl;
+            list->printList();
+
+            std::cout << "\nInserire il nome del prodotto da rimuovere:" << std::endl;
+            std::string name;
+            std::cin >> name;
+
+            Product* product = list->search(name);
+
+            if(product != nullptr){
+                list->removeProduct(product);
+            } else
+                std::cout << "Il prodotto non e' presente nella lista!\n" << std::endl;
 
         } else if (selectedAction == 4) {               // Aggiornare un prodotto della lista
 
@@ -99,9 +120,7 @@ int main() {
             exit(0);
         } else
             std::cout << "Errore";
-
     }
-
 
     return 0;
 }

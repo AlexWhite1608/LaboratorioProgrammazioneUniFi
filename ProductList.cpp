@@ -13,7 +13,7 @@ void ProductList::addProduct(Product *product) {
         for(auto product_ : products){
             if(product_->getName() == product->getName()){
                 product_->editQuantity(product_->getQuantity() + 1);
-                std::cout << "Il prodotto è già presente, aumentata la quantità!" << std::endl;
+                std::cout << "Il prodotto e' gia' presente, aumentata la quantita'!" << std::endl;
             }
         }
     } else
@@ -52,6 +52,15 @@ void ProductList::printList() {
     for(auto i : products){
         std::cout << "Nome prodotto: " << i->getName() << std::endl
                   << "Categoria: " << i->getCategory() << std::endl
-                  << "Quantità: " << i->getQuantity() << std::endl;
+                  << "Quantita': " << i->getQuantity() << std::endl
+                  << "-------------- " << std::endl;
     }
+}
+
+Product *ProductList::search(const std::string &name) {
+    for(auto i : products){
+        if (i->getName() == name)
+            return i;
+    }
+    return nullptr;
 }
