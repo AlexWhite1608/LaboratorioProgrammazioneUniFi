@@ -20,19 +20,15 @@ list
 List.h
 C:/Dev/C++/LaboratorioProgrammazione/List.h
 
+C:/Dev/C++/LaboratorioProgrammazione/Product.cpp
+iostream
+-
+Product.h
+C:/Dev/C++/LaboratorioProgrammazione/Product.h
+
 C:/Dev/C++/LaboratorioProgrammazione/Product.h
 string
 -
-
-C:/Dev/C++/LaboratorioProgrammazione/ProductList.cpp
-iostream
--
-ProductList.h
-C:/Dev/C++/LaboratorioProgrammazione/ProductList.h
-
-C:/Dev/C++/LaboratorioProgrammazione/ProductList.h
-List.h
-C:/Dev/C++/LaboratorioProgrammazione/List.h
 
 C:/Dev/C++/LaboratorioProgrammazione/main.cpp
 iostream

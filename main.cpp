@@ -3,7 +3,7 @@
 
 unsigned int actionList();
 unsigned int actionList() {
-    std::cout << "Benvenuto! Che azione si desidera compiere?" << std::endl;
+    std::cout << "Che azione si desidera compiere?" << std::endl;
 
     std::cout << "1: Creare una nuova lista\n"
               << "2: Inserire un nuovo prodotto nella lista\n"
@@ -57,7 +57,7 @@ int main() {
             std::string category;
             std::cin >> category;
 
-            std::cout << "Inserire la quantità del prodotto:" << std::endl;
+            std::cout << "Inserire la quantita' del prodotto:" << std::endl;
             unsigned int quantity;
             std::cin >> quantity;
 
@@ -90,6 +90,57 @@ int main() {
                 std::cout << "Il prodotto non e' presente nella lista!\n" << std::endl;
 
         } else if (selectedAction == 4) {               // Aggiornare un prodotto della lista
+            listManager->printLists();
+
+            std::cout << "Selezionare la lista dove e' presente il prodotto:" << std::endl;
+            std::string selectedList;
+            std::cin >> selectedList;
+
+            std::cout << "Selezionare il prodotto che si vuole modificare:" << std::endl;
+            std::string selectedProduct;
+            std::cin >> selectedProduct;
+
+            List* list = listManager->searchList(selectedList);
+            Product* product = list->search(selectedProduct);
+
+            if(list == nullptr || product == nullptr){
+                std::cout << "Errore!";
+                exit(1);
+            }
+
+            std::cout << "\n\nCosa si vuole modificare: " << std::endl
+                      << "1: Nome"
+                      << "2: Quantita'" << std::endl;
+
+            int edit;
+            std::cin >> edit;
+
+            unsigned int newQty;
+            std::string newName;
+
+            switch (edit) {
+                case 1:     //Nome
+                    std::cout << "\nInserire il nuovo nome del prodotto: " << std::endl;
+                    std::cin >> newName;
+
+                    product->editName(newName);
+
+                    std::cout << "\nNome aggiornato!" << std::endl;
+                break;
+
+                case 2:     //Quantità
+                    std::cout << "\nInserire la nuova quantita' del prodotto: " << std::endl;
+                    std::cin >> newQty;
+
+                    product->editQuantity(newQty);
+
+                    std::cout << "\nQuantita' aggiornata!" << std::endl;
+                break;
+
+                default:
+                    std::cout << "\nErrore!";
+                    exit(1);
+            }
 
         } else if (selectedAction == 5) {               // Inserire un prodotto nel carrello
 
