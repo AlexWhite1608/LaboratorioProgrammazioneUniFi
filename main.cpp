@@ -92,15 +92,19 @@ int main() {
         } else if (selectedAction == 4) {               // Aggiornare un prodotto della lista
             listManager->printLists();
 
-            std::cout << "Selezionare la lista dove e' presente il prodotto:" << std::endl;
+            std::cout << "Selezionare la lista dove e' presente il prodotto:\n" << std::endl;
             std::string selectedList;
             std::cin >> selectedList;
 
-            std::cout << "Selezionare il prodotto che si vuole modificare:" << std::endl;
+            List* list = listManager->searchList(selectedList);
+
+            std::cout << "Selezionare il prodotto che si vuole modificare:\n" << std::endl;
+
+            list->printList();
             std::string selectedProduct;
             std::cin >> selectedProduct;
 
-            List* list = listManager->searchList(selectedList);
+
             Product* product = list->search(selectedProduct);
 
             if(list == nullptr || product == nullptr){
@@ -109,7 +113,7 @@ int main() {
             }
 
             std::cout << "\n\nCosa si vuole modificare: " << std::endl
-                      << "1: Nome"
+                      << "1: Nome\n"
                       << "2: Quantita'" << std::endl;
 
             int edit;
@@ -125,7 +129,6 @@ int main() {
 
                     product->editName(newName);
 
-                    std::cout << "\nNome aggiornato!" << std::endl;
                 break;
 
                 case 2:     //Quantità
