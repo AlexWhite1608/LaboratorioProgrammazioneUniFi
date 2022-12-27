@@ -12,7 +12,8 @@ unsigned int actionList() {
               << "5: Inserire un prodotto nel carrello\n"
               << "6: Visualizzare una lista\n"
               << "7: Eliminare una lista\n"
-              << "8: Uscire\n" << std::endl;
+              << "8: Visualizzare carrello\n"
+              << "9: Uscire\n" << std::endl;
 
     unsigned int action = 0;
     std::cin >> action;
@@ -23,6 +24,7 @@ unsigned int actionList() {
 int main() {
     unsigned int selectedAction = 1;
     ListManager* listManager = new ListManager();
+    List* cart = listManager->createList("Cart", "");
 
 
     while (selectedAction > 0) {
@@ -146,6 +148,27 @@ int main() {
             }
 
         } else if (selectedAction == 5) {               // Inserire un prodotto nel carrello
+            listManager->printLists();
+
+            std::cout << "Selezionare la lista dove e' presente il prodotto:\n" << std::endl;
+            std::string selectedList;
+            std::cin >> selectedList;
+
+            List* list = listManager->searchList(selectedList);
+
+            std::cout << "Selezionare il prodotto che si vuole inserire:\n" << std::endl;
+
+            list->printList();
+            std::string selectedProduct;
+            std::cin >> selectedProduct;
+
+            Product* product = list->search(selectedProduct);
+
+            cart->addProduct(product);
+            std::cout << selectedProduct << " e' stato aggiunto al carrello!" << std::endl;
+
+            //TODO: se inserito nel carrello il prodotto va rimosso dalla rispettiva lista
+
 
         } else if (selectedAction == 6) {               // Visualizzare una lista
             listManager->printLists();
@@ -170,8 +193,14 @@ int main() {
 
             std::cout << selectedList << " e' stata rimossa!" << std::endl;
 
-        } else if (selectedAction == 8) {               // Uscire
+        } else if (selectedAction == 8) {               // Visualizzare il carrello
+            std::cout << "Nel carrello ci sono i seguenti prodotti: " << std::endl;
+
+            cart->printList();
+
+        } else if (selectedAction == 9) {               // Uscire
             exit(0);
+
         } else
             std::cout << "Errore";
     }

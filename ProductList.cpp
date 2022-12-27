@@ -50,7 +50,7 @@ void ProductList::printList() {
         std::cout << "Lista vuota!" << std::endl;
 
     for(auto i : products){
-        std::cout << "Nome prodotto: " << i->getName() << std::endl
+        std::cout << "\nNome prodotto: " << i->getName() << std::endl
                   << "Categoria: " << i->getCategory() << std::endl
                   << "Quantita': " << i->getQuantity() << std::endl
                   << "-------------- " << std::endl;
