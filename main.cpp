@@ -30,7 +30,10 @@ int main() {
     while (selectedAction > 0) {
         selectedAction = actionList();
 
-        if (selectedAction == 1) {          // Creare una nuova lista
+        // ------------------
+        // Creare una nuova lista
+        // ------------------
+        if (selectedAction == 1) {
             List* newList;
             std::string listName;
 
@@ -40,7 +43,10 @@ int main() {
             newList = listManager->createList("ProductList", listName);
             std::cout << "E' stata creata la lista " << listManager->searchList(newList)->getName() << "!\n\n";
 
-        } else if (selectedAction == 2) {               // Inserire un nuovo prodotto nella lista
+        // ------------------
+        // Inserire un nuovo prodotto nella lista
+        // ------------------
+        } else if (selectedAction == 2) {
             listManager->printLists();
             std::cout << "Selezionare la lista dove inserire il prodotto:" << std::endl;
 
@@ -68,7 +74,10 @@ int main() {
 
             std::cout << name << " e' stato inserito nella lista " << selectedList << std::endl;
 
-        } else if (selectedAction == 3) {               // Rimuovere un prodotto dalla lista
+        // ------------------
+        // Rimuovere un prodotto dalla lista
+        // ------------------
+        } else if (selectedAction == 3) {
             listManager->printLists();
             std::cout << "Selezionare la lista dalla quale rimuovere il prodotto:" << std::endl;
 
@@ -91,7 +100,10 @@ int main() {
             } else
                 std::cout << "Il prodotto non e' presente nella lista!\n" << std::endl;
 
-        } else if (selectedAction == 4) {               // Aggiornare un prodotto della lista
+        // ------------------
+        // Aggiornare un prodotto della lista
+        // ------------------
+        } else if (selectedAction == 4) {
             listManager->printLists();
 
             std::cout << "Selezionare la lista dove e' presente il prodotto:\n" << std::endl;
@@ -105,7 +117,6 @@ int main() {
             list->printList();
             std::string selectedProduct;
             std::cin >> selectedProduct;
-
 
             Product* product = list->search(selectedProduct);
 
@@ -147,7 +158,10 @@ int main() {
                     exit(1);
             }
 
-        } else if (selectedAction == 5) {               // Inserire un prodotto nel carrello
+        // ------------------
+        // Inserire un prodotto nel carrello
+        // ------------------
+        } else if (selectedAction == 5) {
             listManager->printLists();
 
             std::cout << "Selezionare la lista dove e' presente il prodotto:\n" << std::endl;
@@ -170,7 +184,10 @@ int main() {
             //TODO: se inserito nel carrello il prodotto va rimosso dalla rispettiva lista
 
 
-        } else if (selectedAction == 6) {               // Visualizzare una lista
+        // ------------------
+        // Visualizzare una lista
+        // ------------------
+        } else if (selectedAction == 6) {
             listManager->printLists();
 
             std::cout << "Selezionare la lista da visualizzare:" << std::endl;
@@ -182,7 +199,10 @@ int main() {
             if(list != nullptr)
                 list->printList();
 
-        } else if (selectedAction == 7) {               // Eliminare una lista
+        // ------------------
+        // Eliminare una lista
+        // ------------------
+        } else if (selectedAction == 7) {
             listManager->printLists();
 
             std::cout << "Selezionare la lista da eliminare:" << std::endl;
@@ -193,12 +213,18 @@ int main() {
 
             std::cout << selectedList << " e' stata rimossa!" << std::endl;
 
-        } else if (selectedAction == 8) {               // Visualizzare il carrello
+        // ------------------
+        // Visualizzare il carrello
+        // ------------------
+        } else if (selectedAction == 8) {
             std::cout << "Nel carrello ci sono i seguenti prodotti: " << std::endl;
 
             cart->printList();
 
-        } else if (selectedAction == 9) {               // Uscire
+        // ------------------
+        // Uscire
+        // ------------------
+        } else if (selectedAction == 9) {
             exit(0);
 
         } else
