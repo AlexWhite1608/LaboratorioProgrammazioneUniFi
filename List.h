@@ -26,7 +26,11 @@ public:
 
     virtual void printList() = 0;
 
-    virtual ~List();
+    virtual ~List() {
+        for(auto product : products){
+            delete product;
+        }
+    };
 
 protected:
     std::string name;
