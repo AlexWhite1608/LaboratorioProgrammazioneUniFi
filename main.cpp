@@ -21,6 +21,8 @@ unsigned int actionList() {
     return action;
 }
 
+//TODO: aggiungi i CLS e sistema grafica
+
 int main() {
     unsigned int selectedAction = 1;
     ListManager* listManager = new ListManager();
@@ -182,6 +184,7 @@ int main() {
             std::cout << selectedProduct << " e' stato aggiunto al carrello!" << std::endl;
 
             //TODO: se inserito nel carrello il prodotto va rimosso dalla rispettiva lista
+            list->removeProduct(product);
 
 
         // ------------------
@@ -227,8 +230,10 @@ int main() {
         } else if (selectedAction == 9) {
             exit(0);
 
-        } else
+        } else {
             std::cout << "Errore";
+            exit(1);
+        }
     }
 
     return 0;
