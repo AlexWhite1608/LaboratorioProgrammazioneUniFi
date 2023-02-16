@@ -1,6 +1,9 @@
-cmake_minimum_required(VERSION 3.17)
+cmake_minimum_required(VERSION 3.10)
 project(LaboratorioProgrammazione)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(LaboratorioProgrammazione main.cpp Product.cpp Product.h List.cpp List.h ListManager.cpp ListManager.h ProductList.cpp ProductList.h Cart.cpp Cart.h ActionManager.h)
+add_subdirectory(test)
+
+set(SOURCE_FILES main.cpp Product.cpp Product.h List.cpp List.h ListManager.cpp ListManager.h ProductList.cpp ProductList.h Cart.cpp Cart.h )
+add_executable(LaboratorioProgrammazione main.cpp Product.cpp Product.h List.cpp List.h ListManager.cpp ListManager.h ProductList.cpp ProductList.h Cart.cpp Cart.h)

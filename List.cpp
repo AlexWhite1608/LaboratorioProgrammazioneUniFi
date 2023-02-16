@@ -10,5 +10,3 @@ const std::string &List::getName() const {
     return name;
 }
 
-List::~List() {
-}
