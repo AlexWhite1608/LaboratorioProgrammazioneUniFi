@@ -23,7 +23,6 @@ class TestProdotti : public ::testing::Test{
 protected:
     ListManager* listManager = nullptr;
     List* list = nullptr;
-    unsigned int size = 0;
 
 };
 
@@ -39,20 +38,17 @@ TEST_F(TestProdotti, Inserimento){
 
 }
 
-// Test: rimozione prodotto dalla lista (quantità = 1)
+// Test: rimozione prodotto dalla lista (quantità == 1)
 TEST_F(TestProdotti, Rimozione){
     Product* product = new Product("TestProdotto", "TestCategoria", 1);
     list->addProduct(product);
 
-    size = list->getProducts().size();
-
-    EXPECT_EQ(size, 1);
+    EXPECT_EQ(list->getProducts().size(), 1);
 
     list->removeProduct(product);
 
-    size = list->getProducts().size();
+    EXPECT_EQ(list->getProducts().size(), 0);
 
-    EXPECT_EQ(size, 0);
 
 }
 
