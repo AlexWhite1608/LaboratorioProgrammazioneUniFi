@@ -29,7 +29,7 @@ void ProductList::removeProduct(Product *product) {
             if(product_->getName() == product->getName()){
                 if(product_->getQuantity() > 1){
                     product_->editQuantity(product_->getQuantity() - 1);
-                    std::cout << "E' stato rimosso un articolo di " << product->getName() << ", ne rimangono " << product_->getQuantity() << std::endl;
+                    //std::cout << "E' stato rimosso un articolo di " << product->getName() << ", ne rimangono " << product_->getQuantity() << std::endl;
                     break;
                 } else if (product_->getQuantity() == 1){
                     products.remove(product);

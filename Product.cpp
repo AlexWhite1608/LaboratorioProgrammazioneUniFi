@@ -34,5 +34,5 @@ void Product::editName(const std::string &newName) {
 void Product::editQuantity(const unsigned int newQuantity) {
     this->quantity = newQuantity;
 
-    std::cout << "\nIl nuova quantita' del prodotto e' " << this->getQuantity();
+//    std::cout << "\nLa nuova quantita' del prodotto e' " << this->getQuantity();
 }

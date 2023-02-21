@@ -49,7 +49,19 @@ TEST_F(TestProdotti, Rimozione){
 
     EXPECT_EQ(list->getProducts().size(), 0);
 
-
 }
 
 // Test: rimozione prodotto dalla lista (quantità > 1)
+TEST_F(TestProdotti, RimozioneQuantita){
+    Product* product = new Product("TestProdotto", "TestCategoria", 3);
+    list->addProduct(product);
+
+    EXPECT_EQ(list->getProducts().size(), 1);
+    EXPECT_EQ(list->search(product)->getQuantity(), 3);
+
+    list->removeProduct(product);
+
+    EXPECT_EQ(list->getProducts().size(), 1);
+    EXPECT_EQ(list->search(product)->getQuantity(), 2);
+
+}
