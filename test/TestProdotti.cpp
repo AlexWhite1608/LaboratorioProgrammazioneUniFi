@@ -1,7 +1,3 @@
-//
-// Created by aless on 16/02/2023.
-//
-
 #include "gtest/gtest.h"
 #include "../List.h"
 #include "../ListManager.h"
