@@ -34,3 +34,19 @@ TEST_F(TestListe, RimozioneLista){
 
     EXPECT_EQ(listManager->getLists().size(), 0);
 }
+
+// Test: ricerca di una lista
+TEST_F(TestListe, RicercaLista){
+    auto list1 = listManager->createList("ProductList", "ListaProva1");
+    auto list2 = listManager->createList("ProductList", "ListaProva2");
+
+    EXPECT_EQ(listManager->getLists().size(), 2);
+
+    auto findList1 = listManager->searchList("ListaProva1");
+    auto findList2 = listManager->searchList(list2);
+
+    EXPECT_EQ(list2, findList2);
+    EXPECT_EQ(list1, findList1);
+
+
+}
