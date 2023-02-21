@@ -23,6 +23,8 @@ public:
 
     List* searchList(const std::string& name);
 
+    const std::list<List *> &getLists() const;
+
 private:
     std::list<List*> lists;
 };

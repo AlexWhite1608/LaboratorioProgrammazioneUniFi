@@ -69,3 +69,7 @@ void ListManager::removeList(const std::string &name) {
 
     std::cout << "Impossibile rimuovere la lista selezionata!";
 }
+
+const std::list<List *> &ListManager::getLists() const {
+    return lists;
+}
