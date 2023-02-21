@@ -39,7 +39,7 @@ TEST_F(TestProdotti, Inserimento){
 }
 
 // Test: rimozione prodotto dalla lista (quantità == 1)
-TEST_F(TestProdotti, Rimozione){
+TEST_F(TestProdotti, RimozioneUnitaria){
     Product* product = new Product("TestProdotto", "TestCategoria", 1);
     list->addProduct(product);
 
@@ -64,4 +64,16 @@ TEST_F(TestProdotti, RimozioneQuantita){
     EXPECT_EQ(list->getProducts().size(), 1);
     EXPECT_EQ(list->search(product)->getQuantity(), 2);
 
+}
+
+// Test aggiornamento prodotto nella lista: (nome, quantità)
+TEST_F(TestProdotti, Aggiornamento){
+    Product* product = new Product("TestProdotto", "TestCategoria", 2);
+    list->addProduct(product);
+
+    product->editName("NuovoNome");
+    product->editQuantity(3);
+
+    EXPECT_EQ(product->getName(), "NuovoNome");
+    EXPECT_EQ(product->getQuantity(), 3);
 }
