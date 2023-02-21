@@ -5,14 +5,31 @@
 #include "gtest/gtest.h"
 #include "../List.h"
 #include "../ListManager.h"
-#include "../Product.h"
 
-// Test: creare una nuova lista ed aggiungere un prodotto
+class TestProdotti : public ::testing::Test{
+    void SetUp() override
+    {
+        listManager = new ListManager();
+        list = listManager->createList("ProductList", "Test");
+    }
 
-TEST(TestProdotti, CreazioneEInserimento){
-    ListManager* listManager = new ListManager();
-    List* list = listManager->createList("ProductList", "Test");
+    void TearDown() override {
+        delete listManager;
+        delete list;
+        listManager = nullptr;
+        list = nullptr;
+    }
 
+protected:
+    ListManager* listManager = nullptr;
+    List* list = nullptr;
+    unsigned int size = 0;
+
+};
+
+
+// Test: aggiungere un prodotto alla lista
+TEST_F(TestProdotti, Inserimento){
     EXPECT_EQ(list->getProducts().size(), 0);
 
     Product* product = new Product("TestProdotto", "TestCategoria", 1);
@@ -21,3 +38,22 @@ TEST(TestProdotti, CreazioneEInserimento){
     EXPECT_EQ(list->getProducts().size(), 1);
 
 }
+
+// Test: rimozione prodotto dalla lista (quantità = 1)
+TEST_F(TestProdotti, Rimozione){
+    Product* product = new Product("TestProdotto", "TestCategoria", 1);
+    list->addProduct(product);
+
+    size = list->getProducts().size();
+
+    EXPECT_EQ(size, 1);
+
+    list->removeProduct(product);
+
+    size = list->getProducts().size();
+
+    EXPECT_EQ(size, 0);
+
+}
+
+// Test: rimozione prodotto dalla lista (quantità > 1)

@@ -97,10 +97,8 @@ int main() {
 
             Product* product = list->search(name);
 
-            if(product != nullptr){
-                list->removeProduct(product);
-            } else
-                std::cout << "Il prodotto non e' presente nella lista!\n" << std::endl;
+            list->removeProduct(product);
+
 
         // ------------------
         // Aggiornare un prodotto della lista
