@@ -10,3 +10,7 @@ const std::string &List::getName() const {
     return name;
 }
 
+const std::list<Product *> &List::getProducts() const {
+    return products;
+}
+

@@ -26,6 +26,8 @@ public:
 
     virtual void printList() = 0;
 
+    const std::list<Product *> &getProducts() const;
+
     virtual ~List() {
         for(auto product : products){
             delete product;
