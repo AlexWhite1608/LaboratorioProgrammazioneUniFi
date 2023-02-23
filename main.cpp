@@ -12,8 +12,7 @@ unsigned int actionList() {
               << "5: Inserire un prodotto nel carrello\n"
               << "6: Visualizzare una lista\n"
               << "7: Eliminare una lista\n"
-              << "8: Visualizzare carrello\n"
-              << "9: Uscire\n" << std::endl;
+              << "8: Visualizzare carrello\n" << std::endl;
 
     unsigned int action = 0;
     std::cin >> action;
@@ -21,21 +20,11 @@ unsigned int actionList() {
     return action;
 }
 
-//TODO: aggiungi i CLS e sistema grafica
+void actionManager(unsigned int action, ListManager* listManager, List* cart);
+void actionManager(unsigned int action, ListManager* listManager, List* cart){
 
-int main() {
-    unsigned int selectedAction = 1;
-    ListManager* listManager = new ListManager();
-    List* cart = listManager->createList("Cart", "");
-
-
-    while (selectedAction > 0) {
-        selectedAction = actionList();
-
-        // ------------------
-        // Creare una nuova lista
-        // ------------------
-        if (selectedAction == 1) {
+    switch (action) {
+        case 1: {   // Creare una nuova lista
             List* newList;
             std::string listName;
 
@@ -44,11 +33,10 @@ int main() {
 
             newList = listManager->createList("ProductList", listName);
             std::cout << "E' stata creata la lista " << listManager->searchList(newList)->getName() << "!\n\n";
+            break;
+        }
 
-        // ------------------
-        // Inserire un nuovo prodotto nella lista
-        // ------------------
-        } else if (selectedAction == 2) {
+        case 2: {   // Inserire un nuovo prodotto nella lista
             listManager->printLists();
             std::cout << "Selezionare la lista dove inserire il prodotto:" << std::endl;
 
@@ -75,11 +63,10 @@ int main() {
             list->addProduct(product);
 
             std::cout << name << " e' stato inserito nella lista " << selectedList << std::endl;
+            break;
+        }
 
-        // ------------------
-        // Rimuovere un prodotto dalla lista
-        // ------------------
-        } else if (selectedAction == 3) {
+        case 3: {   // Rimuovere un prodotto dalla lista
             listManager->printLists();
             std::cout << "Selezionare la lista dalla quale rimuovere il prodotto:" << std::endl;
 
@@ -98,12 +85,10 @@ int main() {
             Product* product = list->search(name);
 
             list->removeProduct(product);
+            break;
+        }
 
-
-        // ------------------
-        // Aggiornare un prodotto della lista
-        // ------------------
-        } else if (selectedAction == 4) {
+        case 4: {   // Aggiornare un prodotto della lista
             listManager->printLists();
 
             std::cout << "Selezionare la lista dove e' presente il prodotto:\n" << std::endl;
@@ -142,7 +127,7 @@ int main() {
 
                     product->editName(newName);
 
-                break;
+                    break;
 
                 case 2:     //Quantità
                     std::cout << "\nInserire la nuova quantita' del prodotto: " << std::endl;
@@ -151,17 +136,16 @@ int main() {
                     product->editQuantity(newQty);
 
                     std::cout << "\nQuantita' aggiornata!" << std::endl;
-                break;
+                    break;
 
                 default:
                     std::cout << "\nErrore!";
                     exit(1);
             }
+            break;
+        }
 
-        // ------------------
-        // Inserire un prodotto nel carrello
-        // ------------------
-        } else if (selectedAction == 5) {
+        case 5: {   // Inserire un prodotto nel carrello
             listManager->printLists();
 
             std::cout << "Selezionare la lista dove e' presente il prodotto:\n" << std::endl;
@@ -183,12 +167,10 @@ int main() {
 
             //TODO: se inserito nel carrello il prodotto va rimosso dalla rispettiva lista
             list->removeProduct(product);
+            break;
+        }
 
-
-        // ------------------
-        // Visualizzare una lista
-        // ------------------
-        } else if (selectedAction == 6) {
+        case 6: {
             listManager->printLists();
 
             std::cout << "Selezionare la lista da visualizzare:" << std::endl;
@@ -200,10 +182,10 @@ int main() {
             if(list != nullptr)
                 list->printList();
 
-        // ------------------
-        // Eliminare una lista
-        // ------------------
-        } else if (selectedAction == 7) {
+            break;
+        }
+
+        case 7: {
             listManager->printLists();
 
             std::cout << "Selezionare la lista da eliminare:" << std::endl;
@@ -213,26 +195,37 @@ int main() {
             listManager->removeList(selectedList);
 
             std::cout << selectedList << " e' stata rimossa!" << std::endl;
+            break;
+        }
 
-        // ------------------
-        // Visualizzare il carrello
-        // ------------------
-        } else if (selectedAction == 8) {
+
+        case 8: {
             std::cout << "Nel carrello ci sono i seguenti prodotti: " << std::endl;
 
             cart->printList();
-
-        // ------------------
-        // Uscire
-        // ------------------
-        } else if (selectedAction == 9) {
-            exit(0);
-
-        } else {
-            std::cout << "Errore";
-            exit(1);
+            break;
         }
+
+        default:
+            break;
     }
+
+}
+
+//TODO: aggiungi i CLS e sistema grafica
+
+int main() {
+    unsigned int selectedAction = 1;
+    ListManager* listManager = new ListManager();
+    List* cart = listManager->createList("Cart", "");
+    unsigned int action;
+
+    do {
+
+        action = actionList();
+        actionManager(action, listManager, cart);
+
+    } while (action != 0);
 
     return 0;
 }

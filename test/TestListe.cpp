@@ -47,6 +47,4 @@ TEST_F(TestListe, RicercaLista){
 
     EXPECT_EQ(list2, findList2);
     EXPECT_EQ(list1, findList1);
-
-
 }
