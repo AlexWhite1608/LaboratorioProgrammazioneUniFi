@@ -1,8 +1,3 @@
-//
-// Created by aless on 22/11/2022.
-//
-
-#include <iostream>
 #include "Product.h"
 
 Product::Product(const std::string &name, const std::string &category, unsigned int quantity) : name(name),
@@ -28,11 +23,8 @@ Product::~Product() {
 void Product::editName(const std::string &newName) {
     this->name = newName;
 
-    std::cout << "\nIl nuovo nome del prodotto e' " << this->getName();
 }
 
 void Product::editQuantity(const unsigned int newQuantity) {
     this->quantity = newQuantity;
-
-//    std::cout << "\nLa nuova quantita' del prodotto e' " << this->getQuantity();
 }

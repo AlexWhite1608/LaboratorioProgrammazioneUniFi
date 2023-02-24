@@ -1,7 +1,3 @@
-//
-// Created by aless on 22/11/2022.
-//
-
 #ifndef LABORATORIOPROGRAMMAZIONE_LIST_H
 #define LABORATORIOPROGRAMMAZIONE_LIST_H
 

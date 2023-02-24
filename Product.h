@@ -1,7 +1,3 @@
-//
-// Created by aless on 22/11/2022.
-//
-
 #ifndef LABORATORIOPROGRAMMAZIONE_PRODUCT_H
 #define LABORATORIOPROGRAMMAZIONE_PRODUCT_H
 
@@ -21,7 +17,7 @@ public:
 
     void editName(const std::string& newName);
 
-    void editQuantity(const unsigned int newQuantity);
+    void editQuantity(unsigned int newQuantity);
 
 private:
     std::string name;

@@ -215,7 +215,6 @@ void actionManager(unsigned int action, ListManager* listManager, List* cart){
 //TODO: aggiungi i CLS e sistema grafica
 
 int main() {
-    unsigned int selectedAction = 1;
     ListManager* listManager = new ListManager();
     List* cart = listManager->createList("Cart", "");
     unsigned int action;
