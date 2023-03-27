@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 #include "ListManager.h"
 
 unsigned int actionList();
@@ -24,7 +25,7 @@ void actionManager(unsigned int action, ListManager* listManager, List* cart);
 void actionManager(unsigned int action, ListManager* listManager, List* cart){
 
     switch (action) {
-        case 1: {   // Creare una nuova lista
+        case 1: {   // Creare una nuova lista1
             List* newList;
             std::string listName;
 
@@ -47,15 +48,15 @@ void actionManager(unsigned int action, ListManager* listManager, List* cart){
 
             std::cout << "Hai scelto la lista " << selectedList << std::endl;
 
-            std::cout << "Inserire il nome del prodotto:" << std::endl;
+            std::cout << "\nInserire il nome del prodotto:" << std::endl;
             std::string name;
             std::cin >> name;
 
-            std::cout << "Inserire la categoria del prodotto:" << std::endl;
+            std::cout << "\nInserire la categoria del prodotto:" << std::endl;
             std::string category;
             std::cin >> category;
 
-            std::cout << "Inserire la quantita' del prodotto:" << std::endl;
+            std::cout << "\nInserire la quantita' del prodotto:" << std::endl;
             unsigned int quantity;
             std::cin >> quantity;
 
@@ -78,7 +79,7 @@ void actionManager(unsigned int action, ListManager* listManager, List* cart){
             std::cout << "Hai scelto la lista " << selectedList << std::endl;
             list->printList();
 
-            std::cout << "\nInserire il nome del prodotto da rimuovere:" << std::endl;
+            std::cout << "Inserire il nome del prodotto da rimuovere:" << std::endl;
             std::string name;
             std::cin >> name;
 
@@ -165,7 +166,6 @@ void actionManager(unsigned int action, ListManager* listManager, List* cart){
             cart->addProduct(product);
             std::cout << selectedProduct << " e' stato aggiunto al carrello!" << std::endl;
 
-            //TODO: se inserito nel carrello il prodotto va rimosso dalla rispettiva lista
             list->removeProduct(product);
             break;
         }
