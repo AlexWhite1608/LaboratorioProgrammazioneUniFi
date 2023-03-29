@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstdlib>
 #include "ListManager.h"
 
 unsigned int actionList();
@@ -211,8 +210,6 @@ void actionManager(unsigned int action, ListManager* listManager, List* cart){
     }
 
 }
-
-//TODO: aggiungi i CLS e sistema grafica
 
 int main() {
     ListManager* listManager = new ListManager();
