@@ -37,15 +37,6 @@ void ListManager::removeList(List *list) {
         std::cout << list->getName() << " non esiste!" << std::endl;
 }
 
-void ListManager::printLists() {
-    std::cout << "Le liste create dall'utente sono:" << std::endl;
-
-    for(auto element : lists){
-        if(element->getName() != "Carrello")
-            std::cout << element->getName() << std::endl;
-    }
-}
-
 List *ListManager::searchList(const std::string &name) {
     for(auto i : lists){
         if (i->getName() == name)
@@ -55,17 +46,49 @@ List *ListManager::searchList(const std::string &name) {
     return nullptr;
 }
 
-void ListManager::removeList(const std::string &name) {
-    for(auto i : lists){
-        if(i->getName() == name){
-            lists.remove(i);
-            return;
-        }
-    }
-
-    std::cout << "Impossibile rimuovere la lista selezionata!";
-}
-
 const std::list<List *> &ListManager::getLists() const {
     return lists;
+}
+
+void ListManager::addProduct(Product* product, List* list) {
+    if(searchProduct(product, list) != nullptr){
+        for(auto product_ : list->getProducts()){
+            if(product_->getName() == product->getName()){
+                product_->editQuantity(product_->getQuantity() + 1);
+                std::cout << "Il prodotto e' gia' presente, aumentata la quantita'!" << std::endl;
+            }
+        }
+    } else
+        list->getProducts().push_back(product);
+}
+
+void ListManager::removeProduct(Product *product, List* list) {
+    if(searchProduct(product, list) != nullptr){
+        for(auto product_ : list->getProducts()){
+            if(product_->getName() == product->getName()){
+                if(product_->getQuantity() > 1){
+                    product_->editQuantity(product_->getQuantity() - 1);
+                    break;
+                } else if (product_->getQuantity() == 1){
+                    list->getProducts().remove(product);
+                    break;
+                }
+            }
+        }
+    } else
+        std::cout << product->getName() << " non è presente nella lista!" << std::endl;
+}
+
+Product *ListManager::searchProduct(Product *product, List* list) {
+    for(auto& i : list->getProducts()){
+        if (i == product)
+            return i;
+    }
+
+    return nullptr;
+}
+
+void ListManager::moveProductToCart(Product *product, List *list, List *cart) {
+    this->removeProduct(product, list);
+    this->addProduct(product, cart);
 }

@@ -10,19 +10,13 @@ class List {
 public:
     explicit List(const std::string &name);
 
-    virtual void addProduct(Product* product) = 0;
-
-    virtual void removeProduct(Product* product) = 0;
-
     const std::string &getName() const;
-
-    virtual Product* search(Product*) = 0;
-
-    virtual Product* search(const std::string& name) = 0;
 
     virtual void printList() = 0;
 
-    const std::list<Product *> &getProducts() const;
+    int getNumberProducts();
+
+    std::list<Product *> &getProducts();
 
     virtual ~List() {
         for(auto product : products){

@@ -12,16 +12,7 @@ class Cart : public List{
 public:
     explicit Cart(const std::string &name);
 
-    void addProduct(Product *product) override;
-
-    void removeProduct(Product *product) override;
-
-    Product * search(Product *product) override;
-
-    Product *search(const std::string &name) override;
-
     void printList() override;
-
 };
 
 
