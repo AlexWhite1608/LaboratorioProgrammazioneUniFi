@@ -7,6 +7,7 @@ class TestProdotti : public ::testing::Test{
     {
         listManager = new ListManager();
         list = listManager->createList("ProductList", "Test");
+        cart = listManager->createList("Cart", "Carrello");
     }
 
     void TearDown() override {
@@ -19,57 +20,69 @@ class TestProdotti : public ::testing::Test{
 protected:
     ListManager* listManager = nullptr;
     List* list = nullptr;
+    List* cart = nullptr;
 
 };
 
 
 // Test: aggiungere un prodotto alla lista
 TEST_F(TestProdotti, Inserimento){
-    EXPECT_EQ(list->getProducts().size(), 0);
+    EXPECT_EQ(list->getNumberProducts(), 0);
 
     Product* product = new Product("TestProdotto", "TestCategoria", 1);
-    list->addProduct(product);
+    listManager->addProduct(product, list);
 
-    EXPECT_EQ(list->getProducts().size(), 1);
+    EXPECT_EQ(list->getNumberProducts(), 1);
 
 }
 
 // Test: rimozione prodotto dalla lista (quantità == 1)
 TEST_F(TestProdotti, RimozioneUnitaria){
     Product* product = new Product("TestProdotto", "TestCategoria", 1);
-    list->addProduct(product);
+    listManager->addProduct(product, list);
 
-    EXPECT_EQ(list->getProducts().size(), 1);
+    EXPECT_EQ(list->getNumberProducts(), 1);
 
-    list->removeProduct(product);
+    listManager->removeProduct(product, list);
 
-    EXPECT_EQ(list->getProducts().size(), 0);
+    EXPECT_EQ(list->getNumberProducts(), 0);
 
 }
 
 // Test: rimozione prodotto dalla lista (quantità > 1)
 TEST_F(TestProdotti, RimozioneQuantita){
     Product* product = new Product("TestProdotto", "TestCategoria", 3);
-    list->addProduct(product);
+    listManager->addProduct(product, list);
 
-    EXPECT_EQ(list->getProducts().size(), 1);
-    EXPECT_EQ(list->search(product)->getQuantity(), 3);
+    EXPECT_EQ(list->getNumberProducts(), 1);
+    EXPECT_EQ(listManager->searchProduct(product, list)->getQuantity(), 3);
 
-    list->removeProduct(product);
+    listManager->removeProduct(product, list);
 
-    EXPECT_EQ(list->getProducts().size(), 1);
-    EXPECT_EQ(list->search(product)->getQuantity(), 2);
+    EXPECT_EQ(list->getNumberProducts(), 1);
+    EXPECT_EQ(listManager->searchProduct(product, list)->getQuantity(), 2);
 
 }
 
-// Test aggiornamento prodotto nella lista: (nome, quantità)
+// Test: aggiornamento prodotto nella lista: (nome, quantità)
 TEST_F(TestProdotti, Aggiornamento){
     Product* product = new Product("TestProdotto", "TestCategoria", 2);
-    list->addProduct(product);
+    listManager->addProduct(product, list);
 
     product->editName("NuovoNome");
     product->editQuantity(3);
 
     EXPECT_EQ(product->getName(), "NuovoNome");
     EXPECT_EQ(product->getQuantity(), 3);
+}
+
+// Test: spostare un prodotto dalla lista al carrello
+TEST_F(TestProdotti, AggiuntaCarrello){
+    Product* product = new Product("TestProdotto", "TestCategoria", 1);
+
+    listManager->addProduct(product, list);
+    listManager->moveProductToCart(product, list, cart);
+
+    EXPECT_EQ(list->getNumberProducts(), 0);
+    EXPECT_EQ(cart->getNumberProducts(), 1);
 }
