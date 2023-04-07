@@ -5,7 +5,6 @@
 #ifndef LABORATORIOPROGRAMMAZIONE_CART_H
 #define LABORATORIOPROGRAMMAZIONE_CART_H
 
-
 #include "List.h"
 
 class Cart : public List{
