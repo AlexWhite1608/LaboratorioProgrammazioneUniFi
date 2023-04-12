@@ -10,7 +10,7 @@ std::list<Product *> &List::getProducts(){
     return products;
 }
 
-int List::getNumberProducts() {
+int List::getNumberProducts() const{
     return products.size();
 }
 

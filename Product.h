@@ -7,8 +7,6 @@ class Product {
 public:
     Product(const std::string &name, const std::string &category, unsigned int quantity);
 
-    virtual ~Product();
-
     const std::string &getName() const;
 
     const std::string &getCategory() const;

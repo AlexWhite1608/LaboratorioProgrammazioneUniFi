@@ -12,9 +12,7 @@ public:
 
     const std::string &getName() const;
 
-    virtual void printList() = 0;
-
-    int getNumberProducts();
+    int getNumberProducts() const;
 
     std::list<Product *> &getProducts();
 

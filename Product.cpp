@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Product.h"
 
 Product::Product(const std::string &name, const std::string &category, unsigned int quantity) : name(name),
@@ -26,5 +27,8 @@ void Product::editName(const std::string &newName) {
 }
 
 void Product::editQuantity(const unsigned int newQuantity) {
-    this->quantity = newQuantity;
+    if(newQuantity > 0)
+        this->quantity = newQuantity;
+    else
+        std::cout << "Quantità inserita negativa!"<<std::endl;
 }
