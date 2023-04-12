@@ -14,7 +14,13 @@ public:
 
     int getNumberProducts() const;
 
-    std::list<Product *> &getProducts();
+    virtual void printList() const = 0;
+
+    virtual void addProduct(Product* product) = 0;
+
+    virtual void removeProduct(Product* product) = 0;
+
+    virtual Product *searchProduct(Product* product) = 0;
 
     virtual ~List() {
         for(auto product : products){

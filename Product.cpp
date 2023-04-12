@@ -17,10 +17,6 @@ unsigned int Product::getQuantity() const {
     return quantity;
 }
 
-Product::~Product() {
-
-}
-
 void Product::editName(const std::string &newName) {
     this->name = newName;
 

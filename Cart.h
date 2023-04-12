@@ -1,7 +1,3 @@
-//
-// Created by aless on 22/11/2022.
-//
-
 #ifndef LABORATORIOPROGRAMMAZIONE_CART_H
 #define LABORATORIOPROGRAMMAZIONE_CART_H
 
@@ -11,7 +7,14 @@ class Cart : public List{
 public:
     explicit Cart(const std::string &name);
 
-    void printList() override;
+    void printList() const override;
+
+    void addProduct(Product *product) override;
+
+    void removeProduct(Product *product) override;
+
+    Product *searchProduct(Product *product) override;
+
 };
 
 

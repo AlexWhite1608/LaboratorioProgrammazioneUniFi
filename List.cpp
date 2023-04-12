@@ -6,10 +6,6 @@ const std::string &List::getName() const {
     return name;
 }
 
-std::list<Product *> &List::getProducts(){
-    return products;
-}
-
 int List::getNumberProducts() const{
     return products.size();
 }

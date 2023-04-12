@@ -7,7 +7,13 @@ class ProductList : public List{
 public:
     explicit ProductList(const std::string &name);
 
-    void printList() override;
+    void printList() const override;
+
+    void addProduct(Product *product) override;
+
+    void removeProduct(Product *product) override;
+
+    Product *searchProduct(Product *product) override;
 };
 
 
